@@ -126,6 +126,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Application_0.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\triangle.fs" />
+    <None Include="src\triangle.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
