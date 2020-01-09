@@ -3,6 +3,14 @@
 #include "shader.h"
 #include "stb_image.h"
 
+#include "glm/vec3.hpp"
+#include "glm/vec4.hpp"
+#include "glm/mat4x4.hpp"
+#include "glm/ext/matrix_transform.hpp"
+#include "glm/ext/matrix_clip_space.hpp"
+#include "glm/ext/scalar_constants.hpp"
+#include "glm/gtc/type_ptr.hpp"
+
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -152,14 +160,23 @@ int main()
 		glClearColor(0.0f, 0.0f, 0.25f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-		//bind textures to corresponding texture units
+		// Bind textures to corresponding texture units
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, texture1);
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, texture2);
 
-		//render container
+		// Create Transformations
+		glm::mat4 transform = glm::mat4(1.0f); //identity matrix
+		transform = glm::translate(transform, glm::vec3(0.5f, 0.5f, 0.0f));
+		transform = glm::rotate(transform, float(glfwGetTime()), glm::vec3(0.0f, 0.0f, 1.0f));
+
+		// Set Matrix
 		myShader.Use();
+		unsigned int transformLoc = glGetUniformLocation(myShader.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+
+		// Render Triangle
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
