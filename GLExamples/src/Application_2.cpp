@@ -234,9 +234,9 @@ int main()
 			model = glm::translate(model, cubePositions[i]);
 			float angle = 20.0f * i;
 			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.2f, 0.6f));
-			unsigned int modelLoc = glGetUniformLocation(myShader.ID, "model");
-			glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-			//myShader.SetMat4("model", model);
+			//unsigned int modelLoc = glGetUniformLocation(myShader.ID, "model");
+			//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			myShader.SetMat4("model", model);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 

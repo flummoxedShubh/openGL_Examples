@@ -123,7 +123,7 @@ void Shader::SetVec3(const std::string & name, float x, float y, float z) const
 
 void Shader::SetVec4(const std::string & name, const glm::vec4 & value) const
 {
-	glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(value));
+	glUniform4fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(value));
 }
 
 void Shader::SetVec4(const std::string & name, float x, float y, float z, float w) const
@@ -138,12 +138,12 @@ void Shader::SetMat2(const std::string & name, const glm::mat2 & mat) const
 
 void Shader::SetMat3(const std::string & name, const glm::mat3 & mat) const
 {
-	glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
+	glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }
 
 void Shader::SetMat4(const std::string & name, const glm::mat4 & mat) const
 {
-	glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
+	glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }
 
 void Shader::CheckCompileErrors(GLuint shader, std::string type)
