@@ -128,6 +128,7 @@
     <ClCompile Include="src\Application_0.cpp" />
     <ClCompile Include="src\Application_1.cpp" />
     <ClCompile Include="src\Application_2.cpp" />
+    <ClCompile Include="src\Application_3.cpp" />
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\stb_image.cpp" />
   </ItemGroup>
@@ -137,6 +138,10 @@
     <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="src\lamp.fs" />
+    <None Include="src\lamp.vs" />
+    <None Include="src\lighting.fs" />
+    <None Include="src\lighting.vs" />
     <None Include="src\texture.fs" />
     <None Include="src\texture.vs" />
     <None Include="src\triangle.fs" />

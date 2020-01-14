@@ -30,6 +30,9 @@
     <ClCompile Include="src\Application_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Application_3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h">
@@ -47,5 +50,9 @@
     <None Include="src\triangle.fs" />
     <None Include="src\texture.vs" />
     <None Include="src\texture.fs" />
+    <None Include="src\lighting.vs" />
+    <None Include="src\lighting.fs" />
+    <None Include="src\lamp.vs" />
+    <None Include="src\lamp.fs" />
   </ItemGroup>
 </Project>
