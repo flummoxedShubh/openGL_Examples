@@ -78,67 +78,70 @@ int main()
 	Shader lampShader("src/lamp.vs", "src/lamp.fs");
 
 	float vertices[] = {
-		-0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		-0.5f,  0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
+		 0.5f, -0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
+		 0.5f,  0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
+		-0.5f,  0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
+		-0.5f, -0.5f, -0.5f, 0.0f,  0.0f, -1.0f,
 
-		-0.5f, -0.5f,  0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
-		-0.5f, -0.5f,  0.5f,
+		-0.5f, -0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
+		 0.5f, -0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
+		 0.5f,  0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
+		-0.5f,  0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
+		-0.5f, -0.5f,  0.5f, 0.0f,  0.0f,  1.0f,
 
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
 
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
+		 0.5f,  0.5f,  0.5f, 1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f, 1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f, 1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f, 1.0f,  0.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f, 1.0f,  0.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f, 1.0f,  0.0f,  0.0f,
 
-		-0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f, -0.5f,
-		 0.5f, -0.5f,  0.5f,
-		 0.5f, -0.5f,  0.5f,
-		-0.5f, -0.5f,  0.5f,
-		-0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f, 0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f, -0.5f, 0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f, 0.0f, -1.0f,  0.0f,
+		 0.5f, -0.5f,  0.5f, 0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f,  0.5f, 0.0f, -1.0f,  0.0f,
+		-0.5f, -0.5f, -0.5f, 0.0f, -1.0f,  0.0f,
 
-		-0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f, -0.5f,
-		 0.5f,  0.5f,  0.5f,
-		 0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f,
-		-0.5f,  0.5f, -0.5f,
+		-0.5f,  0.5f, -0.5f, 0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f, -0.5f, 0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f, 0.0f,  1.0f,  0.0f,
+		 0.5f,  0.5f,  0.5f, 0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f,  0.5f, 0.0f,  1.0f,  0.0f,
+		-0.5f,  0.5f, -0.5f, 0.0f,  1.0f,  0.0f,
 	};
 
-	unsigned int lightingVAO, VBO;
-	glCreateVertexArrays(1, &lightingVAO);
+	unsigned int cubeVAO, VBO;
+	glCreateVertexArrays(1, &cubeVAO);
 	glGenBuffers(1, &VBO);
 	
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-	glBindVertexArray(lightingVAO);
+	glBindVertexArray(cubeVAO);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	unsigned int lampVAO;
-	glCreateVertexArrays(1, &lampVAO);
-	
-	glBindVertexArray(lampVAO);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)( 3 * sizeof(float)));
+	glEnableVertexAttribArray(1);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	unsigned int lightVAO;
+	glCreateVertexArrays(1, &lightVAO);
+	glBindVertexArray(lightVAO);
+
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
 	// Loop until the user closes the window 
@@ -162,6 +165,8 @@ int main()
 		// Init Uniforms
 		lightShader.SetVec3("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
 		lightShader.SetVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
+		lightShader.SetVec3("lightPos", lightPos);
+		lightShader.SetVec3("viewPos", camera.Position);
 
 		// View and projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
@@ -174,7 +179,7 @@ int main()
 		lightShader.SetMat4("model", model);
 
 		// Render Cube
-		glBindVertexArray(lightingVAO);
+		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// RenderLamp
@@ -186,7 +191,7 @@ int main()
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
 		lampShader.SetMat4("model", model);
 
-		glBindVertexArray(lampVAO);
+		glBindVertexArray(lightVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		// Swap front and back buffers 
@@ -196,8 +201,8 @@ int main()
 		glfwPollEvents();
 	}
 
-	glDeleteVertexArrays(1, &lampVAO);
-	glDeleteVertexArrays(1, &lightingVAO);
+	glDeleteVertexArrays(1, &cubeVAO);
+	glDeleteVertexArrays(1, &lightVAO);
 	glDeleteBuffers(1, &VBO);
 	glfwTerminate();
 	return 0;
