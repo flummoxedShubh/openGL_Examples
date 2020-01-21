@@ -163,16 +163,31 @@ int main()
 		// Render Cube
 		lightShader.Use();
 		// Init Uniforms
-		lightShader.SetVec3("objectColor", glm::vec3(1.0f, 0.5f, 0.31f));
-		lightShader.SetVec3("lightColor", glm::vec3(1.0f, 1.0f, 1.0f));
-		lightShader.SetVec3("lightPos", lightPos);
+		lightShader.SetVec3("light.position", lightPos);
 		lightShader.SetVec3("viewPos", camera.Position);
 
-		// View and projection transformations
+		//light properties
+		glm::vec3 lightColor;
+		lightColor.x = sin(glfwGetTime() * 2.0f);
+		lightColor.y = sin(glfwGetTime() * 0.5f);
+		lightColor.z = sin(glfwGetTime() * 2.4f);
+		glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f); // decrease the influence
+		glm::vec3 ambientColor = lightColor * glm::vec3(0.2f); // low influence
+		lightShader.SetVec3("light.ambient", ambientColor);
+		lightShader.SetVec3("light.diffuse", diffuseColor);
+		lightShader.SetVec3("light.specular", 1.0f, 1.0f, 1.0f);
+
+		//material properties
+		lightShader.SetVec3("material.ambient", 1.0f, 0.4f, 0.5f);
+		lightShader.SetVec3("material.specular", 0.5f, 1.0f, 0.4f);
+		lightShader.SetVec3("material.diffuse", 0.5f, 0.5f, 0.5f);
+		lightShader.SetFloat("material.shininess", 32.0f);
+
+		// view/projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
-		lightShader.SetMat4("projection", projection);
 		lightShader.SetMat4("view", view);
+		lightShader.SetMat4("projection", projection);
 
 		// World transformation
 		glm::mat4 model = glm::mat4(1.0f);
