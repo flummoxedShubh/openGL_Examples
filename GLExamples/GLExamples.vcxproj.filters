@@ -33,6 +33,9 @@
     <ClCompile Include="src\Application_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Application_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h">
@@ -54,5 +57,7 @@
     <None Include="src\lighting.fs" />
     <None Include="src\lamp.vs" />
     <None Include="src\lamp.fs" />
+    <None Include="src\lightmap.vs" />
+    <None Include="src\lightmap.fs" />
   </ItemGroup>
 </Project>
