@@ -130,11 +130,14 @@
     <ClCompile Include="src\Application_2.cpp" />
     <ClCompile Include="src\Application_3.cpp" />
     <ClCompile Include="src\Application_4.cpp" />
+    <ClCompile Include="src\Application_5.cpp" />
     <ClCompile Include="src\shader.cpp" />
     <ClCompile Include="src\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\model.h" />
     <ClInclude Include="src\shader.h" />
     <ClInclude Include="src\stb_image.h" />
   </ItemGroup>
@@ -145,6 +148,8 @@
     <None Include="src\lighting.vs" />
     <None Include="src\lightmap.fs" />
     <None Include="src\lightmap.vs" />
+    <None Include="src\modelloading.fs" />
+    <None Include="src\modelloading.vs" />
     <None Include="src\texture.fs" />
     <None Include="src\texture.vs" />
     <None Include="src\triangle.fs" />

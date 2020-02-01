@@ -36,6 +36,9 @@
     <ClCompile Include="src\Application_4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Application_5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\shader.h">
@@ -45,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,5 +68,7 @@
     <None Include="src\lamp.fs" />
     <None Include="src\lightmap.vs" />
     <None Include="src\lightmap.fs" />
+    <None Include="src\modelloading.vs" />
+    <None Include="src\modelloading.fs" />
   </ItemGroup>
 </Project>
